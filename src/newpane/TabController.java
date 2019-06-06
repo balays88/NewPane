@@ -11,16 +11,17 @@ import javafx.scene.control.ChoiceBox;
 
 public class TabController extends ViewController implements Initializable {
 
-    
     @FXML
-    ChoiceBox<String> text;
-    ObservableList<String> list = FXCollections.observableArrayList();
+    private ChoiceBox<String> textBox;
+    private ObservableList<String> fList = FXCollections.observableArrayList();
     @FXML
     private Button setTextButton;
+    @FXML
+    private ChoiceBox<?> flightNumber;
     
     @FXML
     private void fooBar(){
-        setTabText(text.getValue()); //set Text for Tab which is in the ViewController
+        setTabText("fooBar"); //set Text for Tab which is in the ViewController
         //itt a setTabText()-en kívül még van egy csomó beállíás amit itt class-on belül állítok.
         //próbáltam eventListener-t is használni a ViewController-ben, de ugyanúgy NullPointer lett a vége
     }
@@ -31,10 +32,10 @@ public class TabController extends ViewController implements Initializable {
     }
     
     private void loadList() {
-        list.removeAll(list);
-        list.add("foo");
-        list.add("bar");
-        text.setItems(list);
+        fList.removeAll(fList);
+        fList.add("foo");
+        fList.add("bar");
+        textBox.setItems(fList);
     }
 
 }
