@@ -30,6 +30,7 @@ public class ViewController implements Initializable {
         selectionModel = tabPane.getSelectionModel();
     }
 
+    @FXML
     public void createNewTab(){
         Tab newTab = new Tab();
         try {
