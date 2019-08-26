@@ -14,13 +14,13 @@ import javafx.scene.control.TabPane;
 public class ViewController implements Initializable {
     
     @FXML
-    private TabPane tabPane;
+    public TabPane tabPane;
     @FXML
-    private Button addNewTabButton;
+    public Button addNewTabButton;
     
-    private Integer count = 1;
+    public Integer count = 1;
     
-    private SingleSelectionModel<Tab> selectionModel;
+    public SingleSelectionModel<Tab> selectionModel;
     
     
     
